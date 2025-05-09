@@ -78,7 +78,7 @@ public class CreateUserWithJsonFileTest {
         APIResponse apiGetResponse =
                 requestContext.get("https://gorest.co.in/public/v2/users/"+ userId,
                         RequestOptions.create()
-                                .setHeader("Authorization", "Bearer f4bd5cb99e27882658a2233c4ddd1e8a14f49788f92938580971a46439aa774f"));
+                                .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9"));
 
         Assert.assertEquals(apiGetResponse.status(), 200);
         Assert.assertEquals(apiGetResponse.statusText(), "OK");

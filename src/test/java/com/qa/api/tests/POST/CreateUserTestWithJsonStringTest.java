@@ -1,5 +1,12 @@
 package com.qa.api.tests.POST;
 
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microsoft.playwright.APIRequest;
@@ -7,14 +14,6 @@ import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.RequestOptions;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 public class CreateUserTestWithJsonStringTest {
 
@@ -59,7 +58,7 @@ public class CreateUserTestWithJsonStringTest {
         APIResponse apiPostResponse = requestContext.post("https://gorest.co.in/public/v2/users",
                 RequestOptions.create()
                         .setHeader("Content-Type", "application/json")
-                        .setHeader("Authorization", "Bearer f4bd5cb99e27882658a2233c4ddd1e8a14f49788f92938580971a46439aa774f")
+                        .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9")
                         .setData(reqJsonBody));
 
         System.out.println(apiPostResponse.status());
@@ -83,7 +82,7 @@ public class CreateUserTestWithJsonStringTest {
         APIResponse apiGetResponse =
                 requestContext.get("https://gorest.co.in/public/v2/users/"+ userId,
                         RequestOptions.create()
-                                .setHeader("Authorization", "Bearer f4bd5cb99e27882658a2233c4ddd1e8a14f49788f92938580971a46439aa774f"));
+                                .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9"));
 
         Assert.assertEquals(apiGetResponse.status(), 200);
         Assert.assertEquals(apiGetResponse.statusText(), "OK");

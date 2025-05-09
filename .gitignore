@@ -1,0 +1,9 @@
+/bin/
+/target/
+/test-output/
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.jdt.apt.core.prefs
+.settings/org.eclipse.core.resources.prefs
+.project
+.factorypath
+.classpath
