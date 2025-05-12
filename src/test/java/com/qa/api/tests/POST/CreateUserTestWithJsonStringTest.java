@@ -49,10 +49,12 @@ public class CreateUserTestWithJsonStringTest {
         //String json:
         String reqJsonBody = "{\n" +
                 "  \"name\" : \"testingAPI\",\n" +
-                "  \"email\" : \"testpwapi1@gmail.com\",\n" +
+                "  \"email\" : \"" + getRandomEmail() +"\",\n" +
                 "  \"gender\" : \"male\",\n" +
                 "  \"status\" : \"active\"\n" +
                 "}";
+        
+        System.out.println(reqJsonBody);
 
         //POST Call: create a user
         APIResponse apiPostResponse = requestContext.post("https://gorest.co.in/public/v2/users",

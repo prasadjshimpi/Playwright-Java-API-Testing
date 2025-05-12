@@ -59,7 +59,7 @@ public class UpdateUserPUTCallWithPOJOLombokTest {
         APIResponse apiPostResponse = requestContext.post("https://gorest.co.in/public/v2/users",
                 RequestOptions.create()
                         .setHeader("Content-Type", "application/json")
-                        .setHeader("Authorization", "Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6")
+                        .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9")
                         .setData(users));
 
         System.out.println(apiPostResponse.url());
@@ -95,7 +95,7 @@ public class UpdateUserPUTCallWithPOJOLombokTest {
         APIResponse apiPUTResponse = requestContext.put("https://gorest.co.in/public/v2/users/" + userId,
                 RequestOptions.create()
                         .setHeader("Content-Type", "application/json")
-                        .setHeader("Authorization", "Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6")
+                        .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9")
                         .setData(users));
 
         System.out.println(apiPUTResponse.status() + " : " + apiPUTResponse.statusText());
@@ -114,7 +114,7 @@ public class UpdateUserPUTCallWithPOJOLombokTest {
         //3. Get the updates user with GET CALL:
         APIResponse apiGETResponse = requestContext.get("https://gorest.co.in/public/v2/users/"+userId,
                 RequestOptions.create()
-                .setHeader("Authorization", "Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6"));
+                .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9"));
 
         System.out.println(apiGETResponse.url());
 

@@ -59,7 +59,7 @@ public class DeleteUserAPITest {
         APIResponse apiPostResponse = requestContext.post("https://gorest.co.in/public/v2/users",
                 RequestOptions.create()
                         .setHeader("Content-Type", "application/json")
-                        .setHeader("Authorization", "Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6")
+                        .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9")
                         .setData(users));
 
         System.out.println(apiPostResponse.url());
@@ -84,7 +84,7 @@ public class DeleteUserAPITest {
 
         APIResponse apiDELETEResponse =  requestContext.delete("https://gorest.co.in/public/v2/users/"+userId,
                 RequestOptions.create()
-                        .setHeader("Authorization", "Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6")
+                        .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9")
         );
 
         System.out.println(apiDELETEResponse.status());
@@ -97,7 +97,7 @@ public class DeleteUserAPITest {
         //3. get user -- user id -- 404
         APIResponse apiResponse = requestContext.get("https://gorest.co.in/public/v2/users/" + userId,
                 RequestOptions.create()
-                        .setHeader("Authorization", "Bearer e4b8e1f593dc4a731a153c5ec8cc9b8bbb583ae964ce650a741113091b4e2ac6")
+                        .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9")
         );
 
         System.out.println(apiResponse.text());

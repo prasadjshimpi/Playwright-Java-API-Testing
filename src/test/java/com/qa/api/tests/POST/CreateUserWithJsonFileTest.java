@@ -55,7 +55,7 @@ public class CreateUserWithJsonFileTest {
         APIResponse apiPostResponse = requestContext.post("https://gorest.co.in/public/v2/users",
                 RequestOptions.create()
                         .setHeader("Content-Type", "application/json")
-                        .setHeader("Authorization", "Bearer abc123")
+                        .setHeader("Authorization", "Bearer 24776a1f7f77ab5ba47bce648ed06fe8833ac65c23f9919fa16b76d8ed8094c9")
                         .setData(fileBytes));
 
         Assert.assertEquals(apiPostResponse.status(), 201);
